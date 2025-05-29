@@ -1,5 +1,7 @@
 pipeline {
-    agent { docker { image 'python:3.13.3-alpine3.21' } }
+   agent {
+        label ‘main-host’
+   }    
     stages {
         stage('build') {
             steps {
